@@ -1,1 +1,20 @@
-<p>zoom-range-page works!</p>
+<section id="map" #map></section>
+
+<section class="floting-range p-2">
+  <section class="floating-content">
+    <button class="btn btn-primary" (click)="zoomOut()"> - </button>
+    <input type="range"
+      class="form-range px-2"
+      min="2" max="18"
+      [value]="zoomCurrent"
+      (input)="zoomChange( zoomInput.value)"
+      #zoomInput
+      >
+    <button class="btn btn-primary" (click)="zoomIn()"> + </button>
+  </section>
+  <span class="form-laber">
+    Zoom: {{ zoomCurrent | number: '2.2-2'}}
+    <br>
+    Lng,Lat: {{ 10.33 }}, {{ 10.33 }}
+  </span>
+</section>
