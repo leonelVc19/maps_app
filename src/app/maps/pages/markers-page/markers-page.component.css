@@ -1,0 +1,32 @@
+#map {
+  width: 100vw;
+  height: 100vh;
+}
+
+.list-group {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 99;
+  cursor: pointer;
+
+}
+.list-group-item { 
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    border: 1px solid #eeeded;
+    transition: all 0.3s ease-in-out;
+    color: #fff;
+    border-radius: 0.5rem;
+    margin: 1.3px;
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+.list-group-item:hover {
+    transform: scale(1.07);
+}
+
+button {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+}
+

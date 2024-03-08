@@ -1,1 +1,15 @@
-<p>markers-page works!</p>
+<section id="map" #map></section>
+
+<ul class="list-group">
+    <li *ngFor="let colortMarker of currentMarkers; let i = index" class="list-group-item" 
+        [ngStyle]="{ backgroundColor: colortMarker.color }"
+        (dblclick)="removeMarker(i)" This is the event that will remove the marker
+        (click)="flyToMarker( colortMarker.marker )"
+    >
+        Marker {{ i + 1 }}
+    </li>
+</ul>
+
+<button (click)="createMarker()" class="btn btn-primary">
+    + Add Marker
+</button>
