@@ -27,7 +27,7 @@ Dicha carpeta sera generada con este codigo
 `ng s -o`
 Para iniciar el proyecto
 
-
+Nota: Aun falta el diseño pára moviles
 ## Hola, soy Juan Leonel Vazquez Iglesias.
 
 Desarrollador FullStack
