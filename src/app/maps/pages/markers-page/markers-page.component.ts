@@ -39,7 +39,7 @@ export class MarkersPageComponent implements AfterViewInit, OnDestroy {
     this.readToLocalStorage(); //obtenendo los markers del localstorage
 
 
-    //creando marker personalizado 
+    //creando marker personalizado
     // const marketHmtl = document.createElement('div');
     // marketHmtl.innerHTML = 'Juanito';
     // marketHmtl.style.fontSize = '20px';
@@ -58,7 +58,7 @@ export class MarkersPageComponent implements AfterViewInit, OnDestroy {
 
   //par de eventos para agregar los markers
 
-  public createMarker(): void { 
+  public createMarker(): void {
     if( !this.map) return;
     const color = '#xxxxxx'.replace(/x/g, y=>(Math.random()*16|0).toString(16));
     const lngLat = this.map.getCenter();
@@ -67,7 +67,7 @@ export class MarkersPageComponent implements AfterViewInit, OnDestroy {
 
   public addMarker(lng: LngLat, color: string): void {
     if( !this.map ) return;
-    const marker = new Marker({ color, draggable: true }) //draggable hace que se pueda morver el marker 
+    const marker = new Marker({ color, draggable: true }) //draggable hace que se pueda morver el marker
     .setLngLat( lng )
     .addTo(this.map)
     this.currentMarkers.push({ color, marker });
@@ -86,8 +86,8 @@ export class MarkersPageComponent implements AfterViewInit, OnDestroy {
 
   public flyToMarker(marker:  Marker): void {
     this.map?.flyTo({
-      center: marker.getLngLat(), 
-      
+      center: marker.getLngLat(),
+
     });
   };
 
@@ -104,7 +104,6 @@ export class MarkersPageComponent implements AfterViewInit, OnDestroy {
   public readToLocalStorage(): void {
     const plainMarkersString =  localStorage.getItem('plainMarkers') ?? '[]';
     const plainMarkers: PlainMarker[] = JSON.parse( plainMarkersString );
-    console.log(plainMarkers);
     plainMarkers.forEach( ({color, lngLat}) => {
       const [ lng, lat ] = lngLat; //destructuramos el array
       const coords = new LngLat( lng, lat ); //creamos un nuevo objeto de tipo LngLat

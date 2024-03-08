@@ -1,1 +1,29 @@
-<p>properties-page works!</p>
+<section class="row mt-3">
+  <article class="col-2"></article>
+  <article class="col">
+    <h3>Listado de propiedades</h3>
+    <hr>
+  </article>
+</section>
+
+<section class="row mt-2">
+  <div class="col-2"></div>
+
+  <div class="col">
+    <div class="row">
+        <!-- Houses -->
+        <div class="col-4 mb-2" *ngFor="let house of houses">
+          <div class="card">
+            <!-- <img class="card-img-top"  alt="Card image cap"> -->
+            <map-mini-maps [lngLat]="house.lngLat"/>
+
+            <div class="card-body">
+              <h5 class="card-title">{{ house.title }}</h5>
+              <p class="card-text">{{ house.description }}</p>
+            </div>
+          </div>
+        </div>
+
+    </div>
+  </div>
+</section>

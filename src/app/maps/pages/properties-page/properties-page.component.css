@@ -1,0 +1,9 @@
+.card {
+  border-radius: 0.8rem;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
+  margin: 0.6rem;
+  transition: all 0.2s ease-in-out;
+}
+.card:hover {
+  transform: scale(1.03);
+}

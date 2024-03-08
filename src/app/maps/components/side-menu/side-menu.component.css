@@ -2,3 +2,16 @@ strong {
   cursor: pointer;
   transition: all 0.3s;
 }
+
+li {
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+li:hover {
+  color: #00ffb3;
+  transform: scale3d(1.07, 1.07, 1.07);
+  box-shadow: 5px 10px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  border-radius: 0.3rem;
+}
+
