@@ -1,7 +1,7 @@
 # MapsApp
 
 Proyecto de mapas
-URL del proyecto: [Maps APP](https://leonelvc19.github.io/maps_app/maps/fullscreen).
+URL del proyecto: [Maps APP](https://leonelvc19.github.io/maps_app).
 Este proyecto se subio en GitHub Pages y fue creado en la seccion 21 del curso de angular
 
 # Utilizar el proyecto.
